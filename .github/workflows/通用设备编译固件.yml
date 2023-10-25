@@ -194,7 +194,7 @@ jobs:
           body: |
 
             ### OpenWrt Image information
-            - Default IP: 192.168.1.2
+            - Default IP: 192.168.1.1
             - Default username: root
             - Default password: password
             - Default WIFI name: OpenWrt
