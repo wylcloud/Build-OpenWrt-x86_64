@@ -15,7 +15,7 @@ sed -i 's/root:::0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.::0:99999:7
 sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" package/base-files/files/etc/openwrt_release
 echo "DISTRIB_SOURCECODE='Lienol'" >>package/base-files/files/etc/openwrt_release
 
-# Modify default IP（FROM 192.168.1.1 CHANGE TO 192.168.31.4）
+# Modify default IP（FROM 192.168.1.1 CHANGE TO 192.168.1.2）
 sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
 #
 # ------------------------------- Main source ends -------------------------------
@@ -35,6 +35,10 @@ sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generat
 # svn co https://github.com/libremesh/lime-packages/trunk/packages/{shared-state-pirania,pirania-app,pirania} package/lime-packages/packages
 # Add to compile options (Add related dependencies according to the requirements of the third-party software package Makefile)
 # sed -i "/DEFAULT_PACKAGES/ s/$/ pirania-app pirania ip6tables-mod-nat ipset shared-state-pirania uhttpd-mod-lua/" target/linux/armvirt/Makefile
+
+
+
+
 
 # Apply patch
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
