@@ -18,7 +18,7 @@ on:
           - openwrt-main
           - lede-master
           - immortalwrt-master
-          - Lienol-23.05
+          - Lienol-master
       
 env:
   FEEDS_CONF: config/${{ inputs.source_branch }}/feeds.conf.default
