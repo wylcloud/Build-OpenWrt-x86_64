@@ -18,7 +18,7 @@ on:
           - openwrt-main
           - lede-master
           - immortalwrt-master
-          - Lienol-master
+          - Lienol-23.05
       
 env:
   FEEDS_CONF: config/${{ inputs.source_branch }}/feeds.conf.default
@@ -79,7 +79,7 @@ jobs:
               TAGS_NAME="immortalwrt"
           elif [[ "${{ inputs.source_branch }}" == *"Lienol"* ]]; then
               REPO_URL="https://github.com/Lienol/openwrt"
-              REPO_BRANCH="22.03"
+              REPO_BRANCH="23.05"
               TAGS_NAME="Lienol"
           else
               echo "Unknown source code repository."
