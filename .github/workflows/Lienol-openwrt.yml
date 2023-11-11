@@ -28,10 +28,10 @@ env:
   DOCKER_PASSWD: ${{ secrets.DOCKER_PASSWD }}
   TZ: Asia/Shanghai
   
-  FEEDS_CONF: config/${{ Lienol-master }}/feeds.conf.default
-  CONFIG_FILE: config/${{ Lienol-master }}/config
-  DIY_P1_SH: config/${{ Lienol-master }}/diy-part1.sh
-  DIY_P2_SH: config/${{ Lienol-master }}/diy-part2.sh
+  FEEDS_CONF: config/Lienol-master/feeds.conf.default
+  CONFIG_FILE: config/Lienol-master/config
+  DIY_P1_SH: config/Lienol-master/diy-part1.sh
+  DIY_P2_SH: config/Lienol-master/diy-part2.sh
   
 
 jobs:
