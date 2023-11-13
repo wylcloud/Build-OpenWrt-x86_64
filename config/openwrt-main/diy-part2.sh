@@ -31,6 +31,8 @@ sed -i 's/192.168.1.1/192.168.1.3/g' package/base-files/files/bin/config_generat
 rm -rf feeds/packages/lang/golang/golang
 #svn co https://github.com/openwrt/packages/blob/master/lang/golang/golang feeds/packages/lang/golang/golang
 svn co https://github.com/openwrt/packages/trunk/lang/golang feeds/packages/lang/golang/golang
+
+git config --global http.sslverify false
 # Add third-party software packages (The entire repository)
 # git clone https://github.com/libremesh/lime-packages.git package/lime-packages
 # Add third-party software packages (Specify the package)
